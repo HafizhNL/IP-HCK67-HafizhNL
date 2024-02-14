@@ -6,8 +6,16 @@ const errorHandler = (error, req, res, next) => {
             break;
         case "SequelizeValidationError":
         case "SequelizeUniqueConstraintError":
-            // case  "SequelizeForeignKeyConstraintError":
             res.status(400).json({ message: error.errors[0].message })
+            break;
+        case "Emailrequired":
+        case "Passwordrequired":
+        case "Usernamerequired":
+            res.status(400).json({ message: "Form required" })
+            break;
+        case "InvalidUser":
+        case "InvalidPassword":
+            res.status(401).json({ message: "Invalid User/Password" })
             break;
 
         default:
