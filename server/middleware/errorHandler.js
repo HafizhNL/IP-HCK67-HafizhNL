@@ -20,6 +20,8 @@ const errorHandler = (error, req, res, next) => {
         case "Unauthorized":
             res.status(401).json({ message: "Unauthorized" })
             break;
+        case "FileRequired":
+            res.status(400).json({message: "FileRequired"})
 
         default:
             res.status(500).json({ message: "Internal server error" })
