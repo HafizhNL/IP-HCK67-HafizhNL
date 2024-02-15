@@ -17,6 +17,9 @@ const errorHandler = (error, req, res, next) => {
         case "InvalidPassword":
             res.status(401).json({ message: "Invalid User/Password" })
             break;
+        case "Unauthorized":
+            res.status(401).json({ message: "Unauthorized" })
+            break;
 
         default:
             res.status(500).json({ message: "Internal server error" })
