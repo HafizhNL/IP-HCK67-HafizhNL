@@ -38,9 +38,14 @@ List of available endpoints:
 - `POST /register`
 - `POST /login`
 
+List below dont need authentication:
+- `GET /public/products`
+- `GET /public/products/:id`
+
 List below need authentication:
 - `GET /products`
 - `GET /products/:id`
 - `POST /products/add`
 - `DELETE /products/:id`
 - `PUT /products/:id`
+- `PATCH /products/:id/cover-url`
