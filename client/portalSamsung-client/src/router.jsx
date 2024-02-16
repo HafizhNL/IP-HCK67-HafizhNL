@@ -1,8 +1,9 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
-import Login from "./pages/loginPage";
+// import Login from "./pages/loginPage";
 import Register from "./pages/registerPage";
 import HomePublic from "./pages/homePublicPage";
 import DetailPublic from "./pages/detailPage";
+import Login from "./pages/loginPage"
 
 export const router = createBrowserRouter([
     {
